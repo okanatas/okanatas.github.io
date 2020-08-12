@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Contact Us</title>
+  <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous"> -->
+  <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet" />
+  <script src="contact-us.js"></script>
+  <link rel="stylesheet" href="contact-us.css" />
+</head>
+
+<body>
+  <div class="main-block">
+    <div class="left-part">
+      <i class="fas fa-envelope"></i>
+      <i class="fas fa-at"></i>
+      <i class="fas fa-mail-bulk"></i>
+    </div>
+    <form action="https://httpbin.org/post" method="post">
+      <h1>Atas Martial Art Costumer Communication Form</h1>
+      <div class="info">
+        <label for="name">Full Name</label>
+        <input class="fname" type="text" name="name" required>
+        <label for="email">Email</label>
+        <input type="email" name="email" required>
+        <label for="address">Address</label>
+        <textarea rows="2" name="address" required></textarea>
+        <label for="city">Choose your city from the list</label>
+        <input list="cities" name="city" id="city" required>
+        <datalist id="cities">
+          <option value="Calgary">
+          <option value="Edmonton">
+          <option value="Halifax">
+          <option value="Hamilton">
+          <option value="Kingston">
+          <option value="Ottawa">
+          <option value="Quebec City">
+          <option value="Toronto">
+          <option value="Winnipeg">
+          <option value="Other">
+        </datalist>
+        <label for="zip">Postal Code</label>
+        <input type="text" name="zip" pattern="[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]"
+          placeholder="Format example: A7C 4D9" required />
+      </div>
+      <p>What this is message about</p><br>
+      <div class="box-values" required>
+        <div class="purpose">
+          <p>Question</p>
+        </div>
+        <input type="radio" class="boxx" name="checkbox" onclick="notAppend()" required>
+        <div class="purpose">
+          <p>Comment</p>
+        </div>
+        <input type="radio" class="boxx" name="checkbox" onclick="notAppend()">
+        <div class="purpose">
+          <p>Order Problem</p>
+        </div>
+        <input type="radio" class="boxx" name="checkbox" onclick="append()">
+      </div>
+
+      <input type="number" name="order-num" id="or-num" style="display: none;"
+        placeholder="Please Enter Order Number Here" required>
+
+      <p>Message</p>
+      <div>
+        <textarea rows="4" name="message" required></textarea>
+      </div>
+      <input type="hidden" name="my-name" value="Okan">
+      <button type="submit" href="#">Submit</button>
+    </form>
+  </div>
+</body>
+
+</html>
